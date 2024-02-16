@@ -40,7 +40,7 @@ describe('Central de Atendimento ao Cliente TAT', function () {
   })
 
   it('validação telefone só aceita números', function () {
-    cy.get('#phone').type('abcdefghij').should('be.empty')
+    cy.get('#phone').type('995034244').should('be.empty') //erro aqui
     cy.get('#phone').type('abcdefghij').should('have.value', '')
   })
 
@@ -80,7 +80,7 @@ describe('Central de Atendimento ao Cliente TAT', function () {
   })
 
   it('seleciona um produto (YouTube) por seu texto', function () {
-    cy.get('#product').select('YouTube').should('have.value', 'youtube')
+    cy.get('#product').select('YouTube').should('have.value', 'Ubuntu') //erro aqui youtube
   })
 
   it('seleciona um produto (Mentoria) por seu valor (value)', function () {
